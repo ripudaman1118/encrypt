@@ -1,0 +1,21 @@
+<table>
+    <% for (let d in data) { %>
+        <tr>
+            <td>
+                <a href="/decrypt/<%= data[d].encryptedData %>" target="_blank">
+                    <%= data[d].encryptedData %>
+                </a>
+            </td>
+        </tr>
+    <% } %>
+</table>
+
+
+    <h1>Create a Profile</h1>
+    <form action="/profile" method="POST">
+        <label>Name: <input type="text" name="name"></label><br>
+        <label>Age: <input type="number" name="age"></label><br>
+        <label>Email: <input type="email" name="email"></label><br>
+        <button type="submit">Save Profile</button>
+    </form>
+
